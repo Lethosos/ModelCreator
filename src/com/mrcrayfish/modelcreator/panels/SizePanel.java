@@ -183,6 +183,10 @@ public class SizePanel extends JPanel implements IValueUpdater
 				{
 					cube.addWidth(0.1F);
 				}
+				else if ((e.getModifiers() & ActionEvent.CTRL_MASK) == 2)
+				{
+					cube.addWidth(0.25F);
+				}
 				else
 				{
 					cube.addWidth(1.0F);
@@ -193,7 +197,7 @@ public class SizePanel extends JPanel implements IValueUpdater
 		});
 		btnPlusX.setPreferredSize(new Dimension(62, 30));
 		btnPlusX.setFont(defaultFont);
-		btnPlusX.setToolTipText("<html>Increases the width.<br><b>Hold shift for decimals</b></html>");
+		btnPlusX.setToolTipText("<html>Increases the width.<br><b>Hold SHIFT for decimals<br>Hold CTRL for quarters</b></html>");
 
 		btnPlusY.addActionListener(e ->
 		{
@@ -203,6 +207,10 @@ public class SizePanel extends JPanel implements IValueUpdater
 				if ((e.getModifiers() & ActionEvent.SHIFT_MASK) == 1)
 				{
 					cube.addHeight(0.1F);
+				}
+				else if ((e.getModifiers() & ActionEvent.CTRL_MASK) == 2)
+				{
+					cube.addHeight(0.25F);
 				}
 				else
 				{
@@ -214,7 +222,7 @@ public class SizePanel extends JPanel implements IValueUpdater
 		});
 		btnPlusY.setPreferredSize(new Dimension(62, 30));
 		btnPlusY.setFont(defaultFont);
-		btnPlusY.setToolTipText("<html>Increases the height.<br><b>Hold shift for decimals</b></html>");
+		btnPlusY.setToolTipText("<html>Increases the height.<br><b>Hold SHIFT for decimals<br>Hold CTRL for quarters</b></html>");
 
 		btnPlusZ.addActionListener(e ->
 		{
@@ -224,6 +232,10 @@ public class SizePanel extends JPanel implements IValueUpdater
 				if ((e.getModifiers() & ActionEvent.SHIFT_MASK) == 1)
 				{
 					cube.addDepth(0.1F);
+				}
+				else if ((e.getModifiers() & ActionEvent.CTRL_MASK) == 2)
+				{
+					cube.addDepth(0.25F);
 				}
 				else
 				{
@@ -235,7 +247,7 @@ public class SizePanel extends JPanel implements IValueUpdater
 		});
 		btnPlusZ.setPreferredSize(new Dimension(62, 30));
 		btnPlusZ.setFont(defaultFont);
-		btnPlusZ.setToolTipText("<html>Increases the depth.<br><b>Hold shift for decimals</b></html>");
+		btnPlusZ.setToolTipText("<html>Increases the depth.<br><b>Hold SHIFT for decimals<br>Hold CTRL for quarters</b></html>");
 
 		btnNegX.addActionListener(e ->
 		{
@@ -245,6 +257,10 @@ public class SizePanel extends JPanel implements IValueUpdater
 				if ((e.getModifiers() & ActionEvent.SHIFT_MASK) == 1)
 				{
 					cube.addWidth(-0.1F);
+				}
+				else if ((e.getModifiers() & ActionEvent.CTRL_MASK) == 2)
+				{
+					cube.addWidth(-0.25F);
 				}
 				else
 				{
@@ -256,7 +272,7 @@ public class SizePanel extends JPanel implements IValueUpdater
 		});
 		btnNegX.setPreferredSize(new Dimension(62, 30));
 		btnNegX.setFont(defaultFont);
-		btnNegX.setToolTipText("<html>Decreases the width.<br><b>Hold shift for decimals</b></html>");
+		btnNegX.setToolTipText("<html>Decreases the width.<br><b>Hold SHIFT for decimals<br>Hold CTRL for quarters</b></html>");
 
 		btnNegY.addActionListener(e ->
 		{
@@ -266,6 +282,10 @@ public class SizePanel extends JPanel implements IValueUpdater
 				if ((e.getModifiers() & ActionEvent.SHIFT_MASK) == 1)
 				{
 					cube.addHeight(-0.1F);
+				}
+				else if ((e.getModifiers() & ActionEvent.CTRL_MASK) == 2)
+				{
+					cube.addHeight(-0.25F);
 				}
 				else
 				{
@@ -277,7 +297,7 @@ public class SizePanel extends JPanel implements IValueUpdater
 		});
 		btnNegY.setPreferredSize(new Dimension(62, 30));
 		btnNegY.setFont(defaultFont);
-		btnNegY.setToolTipText("<html>Decreases the height.<br><b>Hold shift for decimals</b></html>");
+		btnNegY.setToolTipText("<html>Decreases the height.<br><b>Hold SHIFT for decimals<br>Hold CTRL for quarters</b></html>");
 
 		btnNegZ.addActionListener(e ->
 		{
@@ -287,6 +307,10 @@ public class SizePanel extends JPanel implements IValueUpdater
 				if ((e.getModifiers() & ActionEvent.SHIFT_MASK) == 1)
 				{
 					cube.addDepth(-0.1F);
+				}
+				else if ((e.getModifiers() & ActionEvent.CTRL_MASK) == 2)
+				{
+					cube.addDepth(-0.25F);
 				}
 				else
 				{
@@ -298,7 +322,7 @@ public class SizePanel extends JPanel implements IValueUpdater
 		});
 		btnNegZ.setPreferredSize(new Dimension(62, 30));
 		btnNegZ.setFont(defaultFont);
-		btnNegZ.setToolTipText("<html>Decreases the depth.<br><b>Hold shift for decimals</b></html>");
+		btnNegZ.setToolTipText("<html>Decreases the depth.<br><b>Hold SHIFT for decimals<br>Hold CTRL for quarters</b></html>");
 	}
 
 	public void addComponents()
